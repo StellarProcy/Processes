@@ -1,19 +1,9 @@
-procy@procy-laptop:~$ pry
-[1] pry(main)> child_pid = fork { 'sleep 10' }
-=> 11885
-[2] pry(main)> child_pid = fork { 'sleep 10' }
-=> 11889
-[3] pry(main)> child_pid = fork { 'sleep 10' }
-=> 11892
-[4] pry(main)> 
+===bash===
+
+#!/bin/bash
+$(sleep 1 & exec /bin/sleep 10)
+
+===Output===
+
 procy@procy-laptop:~$ ps axo stat,ppid,pid,comm | grep -w defunct
-Z+   11770 11786 pry <defunct>
-Z+   11770 11799 pry <defunct>
-Z+   11770 11802 pry <defunct>
-Z+   11770 11806 pry <defunct>
-Z+   11770 11809 pry <defunct>
-Z+   11770 11812 pry <defunct>
-Z+   11770 11815 pry <defunct>
-Z+   11770 11818 pry <defunct>
-Z+   11770 11821 pry <defunct>
-Z+   11770 11824 pry <defunct>
+Z+   11772 11773 sleep <defunct>

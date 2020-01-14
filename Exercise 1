@@ -1,26 +1,28 @@
 procy@procy-laptop:~$ ls -ls > Output.txt
 procy@procy-laptop:~$ cat Output.txt
-total 64
-0 -rw-r--r-- 1 procy procy    0 Jan 11 17:47 bash
-4 -rwxr-xr-x 1 procy procy   14 Jan 11 19:27 BashScript
-4 -rw-r--r-- 1 procy procy   48 Jan 11 15:40 ConsoleLog.txt
-4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Desktop
-4 drwxr-xr-x 4 procy procy 4096 Dec 27 12:28 Documents
-4 drwxr-xr-x 3 procy procy 4096 Jan 10 14:48 Downloads
-8 -rw-rw-r-- 1 procy procy 4479 Jan 11 19:27 Linux_Bash.txt
-4 drwxr-xr-x 2 procy procy 4096 Jan  9 11:07 Music
-4 -rw-r--r-- 1 procy procy 2477 Jan 11 15:32 Output_la.txt
-0 -rw-r--r-- 1 procy procy    0 Jan 13 11:36 Output.txt
-4 drwxr-xr-x 3 procy procy 4096 Jan 10 14:43 Pictures
-4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Public
-4 drwxrwxr-x 4 procy procy 4096 Jan 10 13:01 RubyProjects
-0 -rw-r--r-- 1 procy procy    0 Jan 11 18:02 script
-4 drwxrwxr-x 9 procy procy 4096 Jan 10 14:50 Software
-4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Templates
-4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Videos
-4 drwxrwxr-x 3 procy procy 4096 Dec 27 11:35 VirtualBox VMs
-
-procy@procy-laptop:~$ ls -la | w
- 11:37:57 up 53 min,  1 user,  load average: 0,55, 0,73, 0,76
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-procy    tty7     :0               10:47     ?     2:11   0.52s cinnamon-session -
+total 100
+ 4 -rwxrwxr-x 1 procy procy   83 Jan 13 17:25 bash_example
+ 4 -rwxr--r-- 1 procy procy  130 Jan 14 16:02 bash_test
+ 4 -rwxr--r-- 1 procy procy   11 Jan 14 13:11 bash_test.save
+ 4 -rw-r--r-- 1 procy procy   48 Jan 11 15:40 ConsoleLog.txt
+ 4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Desktop
+ 4 drwxr-xr-x 4 procy procy 4096 Dec 27 12:28 Documents
+ 4 drwxr-xr-x 3 procy procy 4096 Jan 14 15:02 Downloads
+ 8 -rw-rw-r-- 1 procy procy 4479 Jan 11 19:27 Linux_Bash.txt
+ 4 drwxr-xr-x 2 procy procy 4096 Jan  9 11:07 Music
+ 4 -rw-r--r-- 1 procy procy   10 Jan 14 13:02 myfile
+ 4 -rw-r--r-- 1 procy procy  108 Jan 14 16:01 myfileA.txt
+ 0 -rw-r--r-- 1 procy procy    0 Jan 14 16:29 Output.txt
+ 4 drwxr-xr-x 3 procy procy 4096 Jan 14 15:20 Pictures
+ 4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Public
+ 4 drwxrwxr-x 5 procy procy 4096 Jan 14 12:34 RubyProjects
+ 4 drwxrwxr-x 9 procy procy 4096 Jan 10 14:50 Software
+ 4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Templates
+ 4 -rw-r--r-- 1 procy procy   13 Jan 13 15:59 timeOutput
+ 4 drwxr-xr-x 2 procy procy 4096 Dec 23 18:39 Videos
+ 4 drwxrwxr-x 3 procy procy 4096 Dec 27 11:35 VirtualBox VMs
+12 -rwxr-xr-x 1 procy procy 8392 Jan 13 15:18 zombie
+ 4 -rw-rw-r-- 1 procy procy  180 Jan 13 15:18 Zombie_create.c
+ 4 -rw-rw-r-- 1 procy procy   52 Jan 13 15:40 Zombie_ruby.rb
+procy@procy-laptop:~$ ls -la | wc
+     57     507    3099

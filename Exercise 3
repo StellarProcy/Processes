@@ -1,0 +1,29 @@
+#!/bin/bash
+echo ""
+echo ==========
+echo ""
+echo "Scipt for setting up vars of env from the choosen file:
+${1}"
+echo ""
+echo "Full way to the file is ${1}"
+echo ""
+echo "There is a list of environmental variable of:
+===Start of envirnments variables list==="
+echo ""
+printenv
+echo ""
+echo "===End of environmental list==="
+echo ""
+echo "Setting up new environment variables from the path:"
+echo ""
+echo "${1}"
+echo ""
+env --ignore-environment var="New_var" /bin/bash
+echo ""
+echo "Setting up complete. Waiting for new end output"
+echo ""
+echo "======"
+env
+echo ""
+echo "======"
+echo Complete

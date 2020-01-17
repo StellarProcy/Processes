@@ -1,0 +1,30 @@
+===Служба===
+[Unit]
+Description=TimeOutputService
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/procy/TimeWritingScript.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+===Скрипт===  
+  #!/bin/bash
+path="/usr/local/bin/tmp"
+echo $path
+while true; do
+ date=$(date)
+ echo $date > $path/time.txt
+ sleep 1
+done
+
+===Output===
+procy@procy-laptop:~$ cat /usr/local/bin/tmp/time.txt 
+Fri Jan 17 18:32:44 +04 2020
+procy@procy-laptop:~$ cat /usr/local/bin/tmp/time.txt 
+Fri Jan 17 18:32:46 +04 2020
+procy@procy-laptop:~$ cat /usr/local/bin/tmp/time.txt 
+Fri Jan 17 18:32:46 +04 2020
+

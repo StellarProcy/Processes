@@ -1,0 +1,23 @@
+===Process1===
+#!/bin/bash
+cd "/home/procy/PingPong"
+./Pl2pp.sh $$ &
+pidp2=$!
+_ping() {
+    echo "ping! killing $pidp2"
+    kill -SIGUSR1 $pidp2
+}
+trap _ping SIGUSR1
+trap "kill $pidp2" EXIT
+while true; do sleep 2; done
+
+===Process2===
+#!/bin/bash
+pidp1=$1
+_pong() {
+    echo "pong! killing $pidp1"
+    kill -SIGUSR1 $pidp1
+}
+trap _pong SIGUSR1
+_pong   # start
+while true; do sleep 2; done

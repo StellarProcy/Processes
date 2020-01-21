@@ -1,23 +1,47 @@
-===Process1===
-#!/bin/bash
-cd "/home/procy/PingPong"
-./Pl2pp.sh $$ &
-pidp2=$!
-_ping() {
-    echo "ping! killing $pidp2"
-    kill -SIGUSR1 $pidp2
-}
-trap _ping SIGUSR1
-trap "kill $pidp2" EXIT
-while true; do sleep 2; done
+===README===
 
-===Process2===
-#!/bin/bash
-pidp1=$1
-_pong() {
-    echo "pong! killing $pidp1"
-    kill -SIGUSR1 $pidp1
+1) Launch server:
+ruby ServerRuby.rb
+2) Launch client:
+ruby ClientRuby.rb
+3) just look at the console!
+4) If you want to close the server just type Ctrl-C
+
+===Server===
+
+require 'socket'
+
+server = TCPServer.open(2000)
+puts ""
+puts "Server is running..."
+puts "Waiting for the client"
+puts "..."
+loop {
+   client = server.accept
+   puts "Connection established"
+   client.puts("Time from server")
+   client.puts(Time.now.ctime)
+   client.puts "Closing the connection. Bye!"
+   client.puts "Client was closed"
+   client.close
+   puts "End of connection"
+   puts "====="
 }
-trap _pong SIGUSR1
-_pong   # start
-while true; do sleep 2; done
+
+===Client===
+
+require 'socket'
+
+hostname = 'localhost'
+port = 2000
+
+s = TCPSocket.open(hostname, port)
+puts ""
+puts "Connection established"
+puts "====="
+while line = s.gets
+   puts line.chop
+end
+s.close
+puts "====="
+puts "Connection was closed"

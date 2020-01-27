@@ -1,0 +1,45 @@
+procy@procyLaptop:~$ sudo tcpdump host google.com
+[sudo] password for procy: 
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlp3s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+11:11:10.239747 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [S], seq 2627021346, win 64240, options [mss 1460,sackOK,TS val 3132076500 ecr 0,nop,wscale 7], length 0
+11:11:10.278398 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [S.], seq 658533179, ack 2627021347, win 62392, options [mss 1430,sackOK,TS val 74047615 ecr 3132076500,nop,wscale 8], length 0
+11:11:10.278509 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [.], ack 1, win 502, options [nop,nop,TS val 3132076539 ecr 74047615], length 0
+11:11:23.182002 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [P.], seq 1:19, ack 1, win 502, options [nop,nop,TS val 3132089442 ecr 74047615], length 18: HTTP: GET / HTTP / 1.1
+11:11:23.223514 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], ack 19, win 244, options [nop,nop,TS val 74060560 ecr 3132089442], length 0
+11:11:28.216463 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [P.], seq 3813904946:3813904985, ack 4065967464, win 6204, options [nop,nop,TS val 4250322295 ecr 1473424867], length 39
+11:11:28.252490 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [.], ack 39, win 4031, options [nop,nop,TS val 1473482907 ecr 4250322295], length 0
+11:11:28.253002 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [P.], seq 1:40, ack 39, win 4031, options [nop,nop,TS val 1473482907 ecr 4250322295], length 39
+11:11:28.295060 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], ack 40, win 6204, options [nop,nop,TS val 4250322373 ecr 1473482907], length 0
+11:11:52.525002 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [P.], seq 39:275, ack 40, win 6204, options [nop,nop,TS val 4250346603 ecr 1473482907], length 236
+11:11:52.525083 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [P.], seq 275:908, ack 40, win 6204, options [nop,nop,TS val 4250346603 ecr 1473482907], length 633
+11:11:52.525175 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], seq 908:2326, ack 40, win 6204, options [nop,nop,TS val 4250346604 ecr 1473482907], length 1418
+11:11:52.525184 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], seq 2326:3744, ack 40, win 6204, options [nop,nop,TS val 4250346604 ecr 1473482907], length 1418
+11:11:52.525186 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], seq 3744:5162, ack 40, win 6204, options [nop,nop,TS val 4250346604 ecr 1473482907], length 1418
+11:11:52.525877 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [P.], seq 5162:5544, ack 40, win 6204, options [nop,nop,TS val 4250346604 ecr 1473482907], length 382
+11:11:52.602975 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [.], ack 908, win 4031, options [nop,nop,TS val 1473507215 ecr 4250346603], length 0
+11:11:52.618428 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [.], ack 3744, win 4031, options [nop,nop,TS val 1473507223 ecr 4250346604], length 0
+11:11:52.618507 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [.], ack 5544, win 4031, options [nop,nop,TS val 1473507223 ecr 4250346604], length 0
+11:11:52.619095 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [P.], seq 40:282, ack 5544, win 4031, options [nop,nop,TS val 1473507229 ecr 4250346604], length 242
+11:11:52.619128 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], ack 282, win 6204, options [nop,nop,TS val 4250346698 ecr 1473507229], length 0
+11:11:52.619170 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [P.], seq 282:600, ack 5544, win 4031, options [nop,nop,TS val 1473507229 ecr 4250346604], length 318
+11:11:52.619195 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], ack 600, win 6204, options [nop,nop,TS val 4250346698 ecr 1473507229], length 0
+11:11:52.619218 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [P.], seq 600:778, ack 5544, win 4031, options [nop,nop,TS val 1473507230 ecr 4250346604], length 178
+11:11:52.619236 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], ack 778, win 6204, options [nop,nop,TS val 4250346698 ecr 1473507230], length 0
+11:11:52.619256 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [P.], seq 778:817, ack 5544, win 4031, options [nop,nop,TS val 1473507230 ecr 4250346604], length 39
+11:11:52.619273 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [.], ack 817, win 6204, options [nop,nop,TS val 4250346698 ecr 1473507230], length 0
+11:11:52.619882 IP procyLaptop.47780 > lg-in-f100.1e100.net.https: Flags [P.], seq 5544:5583, ack 817, win 6204, options [nop,nop,TS val 4250346698 ecr 1473507230], length 39
+11:11:52.714415 IP lg-in-f100.1e100.net.https > procyLaptop.47780: Flags [.], ack 5583, win 4031, options [nop,nop,TS val 1473507316 ecr 4250346698], length 0
+11:12:03.781630 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [P.], seq 19:37, ack 1, win 502, options [nop,nop,TS val 3132130042 ecr 74060560], length 18: HTTP
+11:12:03.819840 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], ack 37, win 244, options [nop,nop,TS val 74101154 ecr 3132130042], length 0
+11:12:26.684158 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [P.], seq 37:65, ack 1, win 502, options [nop,nop,TS val 3132152945 ecr 74101154], length 28: HTTP
+11:12:26.723424 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], ack 65, win 244, options [nop,nop,TS val 74124057 ecr 3132152945], length 0
+11:12:28.163936 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [P.], seq 65:67, ack 1, win 502, options [nop,nop,TS val 3132154424 ecr 74124057], length 2: HTTP
+11:12:28.202046 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], ack 67, win 244, options [nop,nop,TS val 74125536 ecr 3132154424], length 0
+11:12:28.204201 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], seq 1:1419, ack 67, win 244, options [nop,nop,TS val 74125536 ecr 3132154424], length 1418: HTTP: HTTP/1.0 400 Bad Request
+11:12:28.204283 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [.], ack 1419, win 501, options [nop,nop,TS val 3132154465 ecr 74125536], length 0
+11:12:28.204338 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [P.], seq 1419:1713, ack 67, win 244, options [nop,nop,TS val 74125536 ecr 3132154424], length 294: HTTP
+11:12:28.204362 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [.], ack 1713, win 501, options [nop,nop,TS val 3132154465 ecr 74125536], length 0
+11:12:28.204388 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [F.], seq 1713, ack 67, win 244, options [nop,nop,TS val 74125536 ecr 3132154424], length 0
+11:12:28.204645 IP procyLaptop.34652 > lg-in-f113.1e100.net.http: Flags [F.], seq 67, ack 1714, win 501, options [nop,nop,TS val 3132154465 ecr 74125536], length 0
+11:12:28.245448 IP lg-in-f113.1e100.net.http > procyLaptop.34652: Flags [.], ack 68, win 244, options [nop,nop,TS val 74125579 ecr 3132154465], length 0
